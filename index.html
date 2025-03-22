@@ -7,17 +7,24 @@
     <style>
         body{
             box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            height: 100vh;
+            padding: 10px;
+
         }
         .container{
-            width: 300px;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px;
+        }
+        .items{
+            background-color: rgb(194, 225, 235);
+            text-align: center;
+            border: 2px solid gray;
             border-radius: 10px;
+            padding: 10px;
         }
         .Image{
-            width: 150px;
+            width: 100px;
+            border-radius: 10px;
         }
         .loader {
             width: 60px;

@@ -12,7 +12,7 @@ const options = {
 		under: '8.2'
 	})
 };
-let loader = document.getElementById("loader");
+
 async function moviesData() {
     try {
         const response = await fetch(url, options);
@@ -28,10 +28,12 @@ async function moviesData() {
 }
 
 function displayData(movies){
-	loader.remove();
+    console.log(movies)
     let container = document.getElementById("container")
+    let loader = document.getElementById("loader")
     let elements = movies.result
     for (let obj of elements){
+        loader.remove();
         let items = document.createElement("div")
         items.className = "items" 
         items.innerHTML = `
